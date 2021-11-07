@@ -36,7 +36,7 @@ torch.backends.cudnn.deterministic = True
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 output_model_path = models_dir / "translate_custom_spacy.pt"
 
-BATCH_SIZE = 128
+BATCH_SIZE = 64
 
 train_iterator = DataLoader(train_dataset, batch_size=BATCH_SIZE, collate_fn=collate_batch, shuffle=True, num_workers=8)
 valid_iterator = DataLoader(valid_dataset, batch_size=BATCH_SIZE, collate_fn=collate_batch, shuffle=True, num_workers=8)
