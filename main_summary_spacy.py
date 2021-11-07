@@ -36,7 +36,7 @@ torch.backends.cudnn.deterministic = True
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 output_model_path = models_dir / "translate_custom_spacy.pt"
 
-BATCH_SIZE = 64
+BATCH_SIZE = 128
 
 train_iterator = DataLoader(train_dataset, batch_size=BATCH_SIZE, collate_fn=collate_batch, shuffle=True, num_workers=8)
 valid_iterator = DataLoader(valid_dataset, batch_size=BATCH_SIZE, collate_fn=collate_batch, shuffle=True, num_workers=8)
@@ -45,13 +45,13 @@ test_iterator = DataLoader(test_dataset, batch_size=BATCH_SIZE, collate_fn=colla
 
 INPUT_DIM = len(SRC.vocab)
 OUTPUT_DIM = len(TRG.vocab)
-HID_DIM = 256
+HID_DIM = 512
 ENC_LAYERS = 3
 DEC_LAYERS = 3
 ENC_HEADS = 8
 DEC_HEADS = 8
-ENC_PF_DIM = 512
-DEC_PF_DIM = 512
+ENC_PF_DIM = 1024
+DEC_PF_DIM = 1024
 ENC_DROPOUT = 0.1
 DEC_DROPOUT = 0.1
 
