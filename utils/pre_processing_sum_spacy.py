@@ -31,9 +31,9 @@ def tokenize_en(text):
 
 dataset_name = "bible_para"
 
-train_data = datasets.load_dataset(dataset_name, "de-en", split="train", cache_dir=str(data_dir))[:50000]
-valid_data = datasets.load_dataset(dataset_name, "de-en", split="train", cache_dir=str(data_dir))[50000:55000]
-test_data = datasets.load_dataset(dataset_name, "de-en", split="train", cache_dir=str(data_dir))[55000:60000]
+train_data = datasets.load_dataset(dataset_name, "de-en", split="train", cache_dir=str(data_dir))[:30000]
+valid_data = datasets.load_dataset(dataset_name, "de-en", split="train", cache_dir=str(data_dir))[30000:33000]
+test_data = datasets.load_dataset(dataset_name, "de-en", split="train", cache_dir=str(data_dir))[33000:36000]
 
 inputs = "de"
 labels = "en"
