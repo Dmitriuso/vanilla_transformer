@@ -1,0 +1,10 @@
+datasets
+matplotlib
+numpy
+pkbar
+spacy==3.0
+tensorboard
+tensorflow
+torch
+torchtext
+transformers
